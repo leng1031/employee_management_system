@@ -18,6 +18,10 @@ public class EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
+    public Employee addEmployee(Employee employee){
+        return employeeRepository.save(employee);
+    }
+
     public List<Employee> findAllEmployees(){
         return employeeRepository.findAll();
     }
